@@ -1,0 +1,32 @@
+<h5 class="mb-4">
+  {{ eProperty.name }}
+</h5>
+<div class="row">
+  <div class="col-12 col-lg-6 order-2 order-lg-1">
+    <p>Address</p>
+    <p class="ml-2 font-weight-light">
+      {{ eProperty.address }}
+    </p>
+    <p>Website</p>
+    <p>
+      <a href="{{ eProperty.website }}" 
+        target="_blank"
+        class="ml-2">
+        {{ eProperty.website }}
+      </a>
+    </p>
+    <p>Phone</p>
+    <p class="ml-2 font-weight-light">
+      {{ eProperty.phone }}
+    </p>
+  </div>
+  <div class="col-12 col-lg-6 order-1 order-lg-2">
+    <img 
+      src="{{ eProperty.imgUrl }}" 
+      alt="{{ eProperty.name }}" 
+      title="{{ eProperty.name }}"
+      class="img-fluid"
+      style="max-height: 20rem;">
+  </div>
+</div>
+

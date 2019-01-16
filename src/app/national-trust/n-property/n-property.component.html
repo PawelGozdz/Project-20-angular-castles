@@ -1,0 +1,32 @@
+<h5 class="mb-4">
+  {{ nProperty.name }}
+</h5>
+<div class="row">
+  <div class="col-12 col-lg-6 order-2 order-lg-1">
+    <p>Address</p>
+    <p class="ml-2 font-weight-light">
+      {{ nProperty.address }}
+    </p>
+    <p>Website</p>
+    <p>
+      <a href="{{ nProperty.website }}" 
+        target="_blank"
+        class="ml-2">
+        {{ nProperty.website }}
+      </a>
+    </p>
+    <p>Email</p>
+    <p class="ml-2 font-weight-light">
+      {{ nProperty.email }}
+    </p>
+  </div>
+  <div class="col-12 col-lg-6 order-1 order-lg-2">
+    <img 
+      src="{{ nProperty.imgUrl }}" 
+      alt="{{ nProperty.name }}" 
+      title="{{ nProperty.name }}"
+      class="img-fluid"
+      style="max-height: 20rem;">
+  </div>
+</div>
+
