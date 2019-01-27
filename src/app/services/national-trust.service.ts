@@ -43,4 +43,8 @@ export class NService {
   getProperty(id: number) {
     return this.nProperties.find((el) => el.id === id);
   }
+
+  addProperty(property: nProperty) {
+    this.nProperties.push(property);
+  }
 }

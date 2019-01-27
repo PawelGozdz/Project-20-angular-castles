@@ -43,4 +43,8 @@ export class HService {
   getProperty(id: number) {
     return this.hProperties.find((el) => el.id === id);
   }
+
+  addProperty(property: hProperty) {
+    this.hProperties.push(property);
+  }
 }

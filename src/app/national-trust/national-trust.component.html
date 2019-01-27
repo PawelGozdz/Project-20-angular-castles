@@ -2,7 +2,14 @@
   <!-- DODAC KONTENER PO PRAWEJ I PO LEWEJ -->
   <div class="row justify-content-center">
     <div class="col col-md-5">
-      <h4 class="my-5">National Trust Properties</h4>
+      <h4 class="my-5">National Trust Properties
+        <button 
+          class="btn btn-outline-primary"
+          type="button"
+          [routerLink]="['/add-new']"
+          >Add New
+        </button>
+      </h4>
       <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center mb-2 shadow"
         *ngFor="let property of nProperties">

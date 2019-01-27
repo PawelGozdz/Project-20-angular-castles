@@ -44,6 +44,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _national_trust_n_property_n_property_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./national-trust/n-property/n-property.component */ "./src/app/national-trust/n-property/n-property.component.ts");
 /* harmony import */ var _english_heritage_e_property_e_property_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./english-heritage/e-property/e-property.component */ "./src/app/english-heritage/e-property/e-property.component.ts");
 /* harmony import */ var _hha_h_property_h_property_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./hha/h-property/h-property.component */ "./src/app/hha/h-property/h-property.component.ts");
+/* harmony import */ var _form_form_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./form/form.component */ "./src/app/form/form.component.ts");
+
 
 
 
@@ -66,6 +68,7 @@ var routes = [
     { path: 'hha', component: _hha_hha_component__WEBPACK_IMPORTED_MODULE_5__["HhaComponent"], children: [
             { path: ':id', component: _hha_h_property_h_property_component__WEBPACK_IMPORTED_MODULE_10__["HPropertyComponent"] }
         ] },
+    { path: 'add-new', component: _form_form_component__WEBPACK_IMPORTED_MODULE_11__["FormComponent"] },
     { path: '', redirectTo: '/not-found', pathMatch: 'full' },
     { path: 'not-found', component: _not_found_not_found_component__WEBPACK_IMPORTED_MODULE_7__["NotFoundComponent"], data: { message: 'Page not found!' } },
     { path: '**', redirectTo: '/not-found' },
@@ -93,7 +96,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body {\r\n  color: #6c757d;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxlQUFlO0NBQ2hCIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcclxuICBjb2xvcjogIzZjNzU3ZDtcclxufVxyXG4iXX0= */"
+module.exports = "body {\r\n  color: #6c757d;\r\n}\r\n\r\ninput.ng-invalid {\r\n  border: 1px solid red;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxlQUFlO0NBQ2hCOztBQUVEO0VBQ0Usc0JBQXNCO0NBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcclxuICBjb2xvcjogIzZjNzU3ZDtcclxufVxyXG5cclxuaW5wdXQubmctaW52YWxpZCB7XHJcbiAgYm9yZGVyOiAxcHggc29saWQgcmVkO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -104,7 +107,7 @@ module.exports = "body {\r\n  color: #6c757d;\r\n}\r\n\r\n/*# sourceMappingURL=d
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <app-header></app-header>\n  <h1 class=\"text-center  my-4\">Castles in Great Britain</h1>\n  <router-outlet></router-outlet>\n  \n  <!-- <app-national-trust></app-national-trust> -->\n  <!-- <hr>\n  <app-english-heritage></app-english-heritage>\n  <hr>\n  <app-hha></app-hha> -->\n</div>"
+module.exports = "<div class=\"container-fluid\">\n  <app-header></app-header>\n  <h1 class=\"text-center  my-4\">Castles in Great Britain</h1>\n  \n  <router-outlet></router-outlet>\n</div>"
 
 /***/ }),
 
@@ -124,7 +127,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'angular-links';
     }
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -154,21 +156,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./header/header.component */ "./src/app/header/header.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _national_trust_national_trust_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./national-trust/national-trust.component */ "./src/app/national-trust/national-trust.component.ts");
-/* harmony import */ var _english_heritage_english_heritage_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./english-heritage/english-heritage.component */ "./src/app/english-heritage/english-heritage.component.ts");
-/* harmony import */ var _hha_hha_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./hha/hha.component */ "./src/app/hha/hha.component.ts");
-/* harmony import */ var _national_trust_n_property_n_property_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./national-trust/n-property/n-property.component */ "./src/app/national-trust/n-property/n-property.component.ts");
-/* harmony import */ var _english_heritage_e_property_e_property_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./english-heritage/e-property/e-property.component */ "./src/app/english-heritage/e-property/e-property.component.ts");
-/* harmony import */ var _hha_h_property_h_property_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./hha/h-property/h-property.component */ "./src/app/hha/h-property/h-property.component.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _not_found_not_found_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./not-found/not-found.component */ "./src/app/not-found/not-found.component.ts");
-/* harmony import */ var _services_national_trust_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./services/national-trust.service */ "./src/app/services/national-trust.service.ts");
-/* harmony import */ var _services_english_heritage_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./services/english-heritage.service */ "./src/app/services/english-heritage.service.ts");
-/* harmony import */ var _services_hha_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/hha.service */ "./src/app/services/hha.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./header/header.component */ "./src/app/header/header.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _national_trust_national_trust_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./national-trust/national-trust.component */ "./src/app/national-trust/national-trust.component.ts");
+/* harmony import */ var _english_heritage_english_heritage_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./english-heritage/english-heritage.component */ "./src/app/english-heritage/english-heritage.component.ts");
+/* harmony import */ var _hha_hha_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./hha/hha.component */ "./src/app/hha/hha.component.ts");
+/* harmony import */ var _national_trust_n_property_n_property_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./national-trust/n-property/n-property.component */ "./src/app/national-trust/n-property/n-property.component.ts");
+/* harmony import */ var _english_heritage_e_property_e_property_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./english-heritage/e-property/e-property.component */ "./src/app/english-heritage/e-property/e-property.component.ts");
+/* harmony import */ var _hha_h_property_h_property_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./hha/h-property/h-property.component */ "./src/app/hha/h-property/h-property.component.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _not_found_not_found_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./not-found/not-found.component */ "./src/app/not-found/not-found.component.ts");
+/* harmony import */ var _services_national_trust_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./services/national-trust.service */ "./src/app/services/national-trust.service.ts");
+/* harmony import */ var _services_english_heritage_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/english-heritage.service */ "./src/app/services/english-heritage.service.ts");
+/* harmony import */ var _services_hha_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/hha.service */ "./src/app/services/hha.service.ts");
+/* harmony import */ var _form_form_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./form/form.component */ "./src/app/form/form.component.ts");
+
+
 
 
 
@@ -193,24 +199,26 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"],
-                _national_trust_national_trust_component__WEBPACK_IMPORTED_MODULE_7__["NationalTrustComponent"],
-                _english_heritage_english_heritage_component__WEBPACK_IMPORTED_MODULE_8__["EnglishHeritageComponent"],
-                _hha_hha_component__WEBPACK_IMPORTED_MODULE_9__["HhaComponent"],
-                _national_trust_n_property_n_property_component__WEBPACK_IMPORTED_MODULE_10__["NPropertyComponent"],
-                _english_heritage_e_property_e_property_component__WEBPACK_IMPORTED_MODULE_11__["EPropertyComponent"],
-                _hha_h_property_h_property_component__WEBPACK_IMPORTED_MODULE_12__["HPropertyComponent"],
-                _home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"],
-                _not_found_not_found_component__WEBPACK_IMPORTED_MODULE_14__["NotFoundComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _header_header_component__WEBPACK_IMPORTED_MODULE_6__["HeaderComponent"],
+                _national_trust_national_trust_component__WEBPACK_IMPORTED_MODULE_8__["NationalTrustComponent"],
+                _english_heritage_english_heritage_component__WEBPACK_IMPORTED_MODULE_9__["EnglishHeritageComponent"],
+                _hha_hha_component__WEBPACK_IMPORTED_MODULE_10__["HhaComponent"],
+                _national_trust_n_property_n_property_component__WEBPACK_IMPORTED_MODULE_11__["NPropertyComponent"],
+                _english_heritage_e_property_e_property_component__WEBPACK_IMPORTED_MODULE_12__["EPropertyComponent"],
+                _hha_h_property_h_property_component__WEBPACK_IMPORTED_MODULE_13__["HPropertyComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_14__["HomeComponent"],
+                _not_found_not_found_component__WEBPACK_IMPORTED_MODULE_15__["NotFoundComponent"],
+                _form_form_component__WEBPACK_IMPORTED_MODULE_19__["FormComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["NoopAnimationsModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["NoopAnimationsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"]
             ],
-            providers: [_services_national_trust_service__WEBPACK_IMPORTED_MODULE_15__["NService"], _services_english_heritage_service__WEBPACK_IMPORTED_MODULE_16__["EService"], _services_hha_service__WEBPACK_IMPORTED_MODULE_17__["HService"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            providers: [_services_national_trust_service__WEBPACK_IMPORTED_MODULE_16__["NService"], _services_english_heritage_service__WEBPACK_IMPORTED_MODULE_17__["EService"], _services_hha_service__WEBPACK_IMPORTED_MODULE_18__["HService"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -238,7 +246,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h5 class=\"mb-4\">\n  {{ eProperty.name }}\n</h5>\n<div class=\"row\">\n  <div class=\"col-12 col-lg-6 order-2 order-lg-1\">\n    <p>Address</p>\n    <p class=\"ml-2 font-weight-light\">\n      {{ eProperty.address }}\n    </p>\n    <p>Website</p>\n    <p>\n      <a href=\"{{ eProperty.website }}\" \n        target=\"_blank\"\n        class=\"ml-2\">\n        {{ eProperty.website }}\n      </a>\n    </p>\n    <p>Phone</p>\n    <p class=\"ml-2 font-weight-light\">\n      {{ eProperty.phone }}\n    </p>\n  </div>\n  <div class=\"col-12 col-lg-6 order-1 order-lg-2\">\n    <img \n      src=\"{{ eProperty.imgUrl }}\" \n      alt=\"{{ eProperty.name }}\" \n      title=\"{{ eProperty.name }}\"\n      class=\"img-fluid\"\n      style=\"max-height: 20rem;\">\n  </div>\n</div>\n\n"
+module.exports = "<h5 class=\"mb-4\">\n  {{ eProperty.name }}\n</h5>\n<div class=\"row\">\n  <div class=\"col-12 col-lg-6 order-2 order-lg-1\">\n    <p>Address</p>\n    <p class=\"ml-2 font-weight-light\">\n      {{ eProperty.address }}\n    </p>\n    <p>Website</p>\n    <p>\n      <a href=\"{{ eProperty.website }}\" \n        target=\"_blank\"\n        class=\"ml-2\">\n        {{ eProperty.website }}\n      </a>\n    </p>\n    <p>Email</p>\n    <p class=\"ml-2 font-weight-light\">\n      {{ eProperty.email }}\n    </p>\n  </div>\n  <div class=\"col-12 col-lg-6 order-1 order-lg-2\">\n    <img \n      src=\"{{ eProperty.imgUrl }}\" \n      alt=\"{{ eProperty.name }}\" \n      title=\"{{ eProperty.name }}\"\n      class=\"img-fluid\"\n      style=\"max-height: 20rem;\">\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -310,7 +318,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section>\n  <div class=\"row justify-content-center\">\n    <div class=\"col col-md-5\">\n      <h4 class=\"my-5\">English Heritage Properties</h4>\n      <ul class=\"list-group\">\n        <li class=\"list-group-item d-flex justify-content-between align-items-center mb-2 shadow\"\n        *ngFor=\"let property of eProperties\">\n          <a \n            [routerLink]=\"['/english-heritage', property.id]\"\n            class=\"d-flex w-100 justify-content-between\">\n            <p>{{ property.name }}</p>\n            <img\n              style=\"height: 3rem; width: 5.5rem;\"\n              src=\"{{ property.imgUrl }}\"\n              alt=\"{{ property.name }}\" \n              title=\"{{ property.name }}\">\n          </a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"col col-md-7\">\n      <h4 class=\"my-5\">Description</h4>\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n</section>\n"
+module.exports = "<section>\n  <div class=\"row justify-content-center\">\n    <div class=\"col col-md-5\">\n      <h4 class=\"my-5\">English Heritage Properties\n        <button \n          class=\"btn btn-outline-primary\"\n          type=\"button\"\n          [routerLink]=\"['/add-new']\"\n          >Add New\n        </button>\n      </h4>\n      <ul class=\"list-group\">\n        <li class=\"list-group-item d-flex justify-content-between align-items-center mb-2 shadow\"\n        *ngFor=\"let property of eProperties\">\n          <a \n            [routerLink]=\"['/english-heritage', property.id]\"\n            class=\"d-flex w-100 justify-content-between\">\n            <p>{{ property.name }}</p>\n            <img\n              style=\"height: 3rem; width: 5.5rem;\"\n              src=\"{{ property.imgUrl }}\"\n              alt=\"{{ property.name }}\" \n              title=\"{{ property.name }}\">\n          </a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"col col-md-7\">\n      <h4 class=\"my-5\">Description</h4>\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n</section>\n"
 
 /***/ }),
 
@@ -359,6 +367,100 @@ var EnglishHeritageComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/form/form.component.css":
+/*!*****************************************!*\
+  !*** ./src/app/form/form.component.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "input.ng-invalid.ng-touched,\r\nselect.ng-invalid.ng-touched   {\r\n  border: 1px solid red;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9ybS9mb3JtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0VBRUUsc0JBQXNCO0NBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvZm9ybS9mb3JtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpbnB1dC5uZy1pbnZhbGlkLm5nLXRvdWNoZWQsXHJcbnNlbGVjdC5uZy1pbnZhbGlkLm5nLXRvdWNoZWQgICB7XHJcbiAgYm9yZGVyOiAxcHggc29saWQgcmVkO1xyXG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/form/form.component.html":
+/*!******************************************!*\
+  !*** ./src/app/form/form.component.html ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<form [formGroup]=\"newForm\" (ngSubmit)=\"onSubmit()\">\n  <div class=\"row\">\n    <div class=\"col-md-6 offset-md-3\">\n      \n      <div class=\"form-group\">\n        <label for=\"propertyName\">Property name</label>\n        <input\n          type=\"text\"\n          id=\"propertyName\"\n          formControlName=\"propertyName\"\n          class=\"form-control\">\n          <span class=\"mt-2\" *ngIf=\"!newForm.get('propertyName').valid && newForm.get('propertyName').touched\">This field is mandatory!!</span>\n      </div>\n      <div class=\"form-group\">\n        <div class=\"input-group-prepend\">\n          <label for=\"inputGroupSelect\">Property type</label>\n        </div>\n        <select \n          id=\"inputGroupSelect\"\n          formControlName=\"inputGroupSelect\"\n          class=\"custom-select\">\n          <option selected disabled>Choose...</option>\n          <option value=\"1\">National Trust</option>\n          <option value=\"2\">English Heritage</option>\n          <option value=\"3\">Historic Houses Association</option>\n        </select>\n        <span class=\"mt-2\" *ngIf=\"!newForm.get('inputGroupSelect').valid && newForm.get('inputGroupSelect').touched\">This field is mandatory!!</span>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"address\">Address</label>\n        <input\n          type=\"text\"\n          id=\"address\"\n          formControlName=\"address\"\n          class=\"form-control\">\n        <span class=\"mt-2\" *ngIf=\"!newForm.get('address').valid && newForm.get('address').touched\">This field is mandatory!!</span>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"website\">Website</label>\n        <input\n          type=\"url\"\n          id=\"website\"\n          formControlName=\"website\"\n          class=\"form-control\">\n        <span class=\"mt-2\" *ngIf=\"!newForm.get('website').valid && newForm.get('website').touched\">This field is mandatory!!</span>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"email\">Email</label>\n        <input\n          type=\"email\"\n          id=\"email\"\n          formControlName=\"email\"\n          class=\"form-control\">\n        <span class=\"mt-2\" *ngIf=\"!newForm.get('email').valid && newForm.get('email').touched\">This field is mandatory!!</span>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"imgUrl\">Img URL</label>\n        <input\n          type=\"url\"\n          id=\"imgUrl\"\n          formControlName=\"imgUrl\"\n          class=\"form-control\">\n        <span class=\"mt-2\" *ngIf=\"!newForm.get('imgUrl').valid && newForm.get('imgUrl').touched\">This field is mandatory!!</span>\n      </div>\n      \n\n      <!-- <div class=\"input-group\">\n        <div class=\"input-group mb-3\">\n          <select class=\"custom-select\" id=\"inputGroupSelect01\">\n            <option selected>Choose...</option>\n            <option value=\"1\">One</option>\n            <option value=\"2\">Two</option>\n            <option value=\"3\">Three</option>\n          </select>\n        </div>\n      </div> -->\n\n      <button \n      class=\"btn btn-success\" type=\"submit\"\n      [disabled]=\"!newForm.valid\">Add\n      </button>\n      \n    </div>\n  </div>\n\n</form>"
+
+/***/ }),
+
+/***/ "./src/app/form/form.component.ts":
+/*!****************************************!*\
+  !*** ./src/app/form/form.component.ts ***!
+  \****************************************/
+/*! exports provided: FormComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormComponent", function() { return FormComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services_national_trust_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/national-trust.service */ "./src/app/services/national-trust.service.ts");
+/* harmony import */ var _services_english_heritage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/english-heritage.service */ "./src/app/services/english-heritage.service.ts");
+/* harmony import */ var _services_hha_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/hha.service */ "./src/app/services/hha.service.ts");
+/* harmony import */ var _models_eProperty_model__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../models/eProperty.model */ "./src/app/models/eProperty.model.ts");
+/* harmony import */ var _models_nProperty_model__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../models/nProperty.model */ "./src/app/models/nProperty.model.ts");
+/* harmony import */ var _models_hProperty_model__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../models/hProperty.model */ "./src/app/models/hProperty.model.ts");
+
+
+
+
+
+
+
+
+
+var FormComponent = /** @class */ (function () {
+    function FormComponent(nService, eService, hService) {
+        this.nService = nService;
+        this.eService = eService;
+        this.hService = hService;
+    }
+    FormComponent.prototype.ngOnInit = function () {
+        this.newForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
+            'propertyName': new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            'inputGroupSelect': new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            'address': new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            'website': new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            'email': new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            'imgUrl': new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+        });
+    };
+    FormComponent.prototype.onSubmit = function () {
+        if (+this.newForm.value.inputGroupSelect === 1) {
+            this.nService.addProperty(new _models_nProperty_model__WEBPACK_IMPORTED_MODULE_7__["nProperty"](this.nService.getNproperties().length + 1, this.newForm.value['propertyName'], this.newForm.value['imgUrl'], this.newForm.value['address'], this.newForm.value['website'], this.newForm.value['email']));
+        }
+        else if (+this.newForm.value.inputGroupSelect === 2) {
+            this.eService.addProperty(new _models_eProperty_model__WEBPACK_IMPORTED_MODULE_6__["eProperty"](this.eService.getEproperties().length + 1, this.newForm.value['propertyName'], this.newForm.value['imgUrl'], this.newForm.value['address'], this.newForm.value['website'], this.newForm.value['email']));
+        }
+        else {
+            this.hService.addProperty(new _models_hProperty_model__WEBPACK_IMPORTED_MODULE_8__["hProperty"](this.hService.getHproperties().length + 1, this.newForm.value['propertyName'], this.newForm.value['imgUrl'], this.newForm.value['address'], this.newForm.value['website'], this.newForm.value['email']));
+        }
+    };
+    FormComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-form',
+            template: __webpack_require__(/*! ./form.component.html */ "./src/app/form/form.component.html"),
+            styles: [__webpack_require__(/*! ./form.component.css */ "./src/app/form/form.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_national_trust_service__WEBPACK_IMPORTED_MODULE_3__["NService"],
+            _services_english_heritage_service__WEBPACK_IMPORTED_MODULE_4__["EService"],
+            _services_hha_service__WEBPACK_IMPORTED_MODULE_5__["HService"]])
+    ], FormComponent);
+    return FormComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/header/header.component.css":
 /*!*********************************************!*\
   !*** ./src/app/header/header.component.css ***!
@@ -377,7 +479,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <header class=\"shadow\">\n    <nav class=\"navbar\">\n      <ul class=\"nav\">\n        <li class=\"nav-item\" role=\"presentation\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">\n          <a routerLink=\"/\" class=\"nav-link\">Home</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\" routerLinkActive=\"active\">\n          <a routerLink=\"/national-trust\" class=\"nav-link\">National Trust</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\" routerLinkActive=\"active\">\n          <a routerLink=\"/english-heritage\" class=\"nav-link\">English Heritage</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\" routerLinkActive=\"active\">\n          <a routerLink=\"/hha\" class=\"nav-link\">HHA</a>\n        </li>\n      </ul>\n    </nav>\n  </header>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <header class=\"shadow\">\n    <nav class=\"navbar\">\n      <ul class=\"nav\">\n        <li class=\"nav-item\" role=\"presentation\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\">\n          <a routerLink=\"/\" class=\"nav-link\">Home</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\" routerLinkActive=\"active\">\n          <a routerLink=\"/national-trust\" class=\"nav-link\">National Trust</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\" routerLinkActive=\"active\">\n          <a routerLink=\"/english-heritage\" class=\"nav-link\">English Heritage</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\" routerLinkActive=\"active\">\n          <a routerLink=\"/hha\" class=\"nav-link\">HHA</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\" routerLinkActive=\"active\">\n          <a routerLink=\"/add-new\" class=\"nav-link\">Add New</a>\n        </li>\n      </ul>\n    </nav>\n  </header>\n</div>\n"
 
 /***/ }),
 
@@ -433,7 +535,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h5 class=\"mb-4\">\n  {{ hProperty.name }}\n</h5>\n<div class=\"row\">\n  <div class=\"col-12 col-lg-6 order-2 order-lg-1\">\n    <p>Address</p>\n    <p class=\"ml-2 font-weight-light\">\n      {{ hProperty.address }}\n    </p>\n    <p>Website</p>\n    <p>\n      <a href=\"{{ hProperty.website }}\" \n        target=\"_blank\"\n        class=\"ml-2\">\n        {{ hProperty.website }}\n      </a>\n    </p>\n    <p>Phone</p>\n    <p class=\"ml-2 font-weight-light\">\n      {{ hProperty.email }}\n    </p>\n  </div>\n  <div class=\"col-12 col-lg-6 order-1 order-lg-2\">\n    <img \n      src=\"{{ hProperty.imgUrl }}\" \n      alt=\"{{ hProperty.name }}\" \n      title=\"{{ hProperty.name }}\" \n      class=\"img-fluid\"\n      style=\"max-height: 20rem;\">\n  </div>\n</div>\n\n"
+module.exports = "<h5 class=\"mb-4\">{{ hProperty.name }}</h5>\n<div class=\"row\">\n  <div class=\"col-12 col-lg-6 order-2 order-lg-1\">\n    <p>Address</p>\n    <p class=\"ml-2 font-weight-light\">\n      {{ hProperty.address }}\n    </p>\n    <p>Website</p>\n    <p>\n      <a href=\"{{ hProperty.website }}\" \n        target=\"_blank\"\n        class=\"ml-2\">\n        {{ hProperty.website }}\n      </a>\n    </p>\n    <p>Email</p>\n    <p class=\"ml-2 font-weight-light\">\n      {{ hProperty.email }}\n    </p>\n  </div>\n  <div class=\"col-12 col-lg-6 order-1 order-lg-2\">\n    <img \n      src=\"{{ hProperty.imgUrl }}\" \n      alt=\"{{ hProperty.name }}\" \n      title=\"{{ hProperty.name }}\" \n      class=\"img-fluid\"\n      style=\"max-height: 20rem;\">\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -505,7 +607,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section>\n  <div class=\"row justify-content-center\">\n    <div class=\"col col-md-5\">\n      <h4 class=\"my-5\">HHA Properties</h4>\n      <ul class=\"list-group\">\n        <li class=\"list-group-item d-flex justify-content-between align-items-center mb-2 shadow\"\n        *ngFor=\"let property of hProperties\">\n          <a \n            [routerLink]=\"['/hha', property.id]\"\n            class=\"d-flex w-100 justify-content-between\">\n            <p>{{ property.name }}</p>\n            <img\n              style=\"height: 3rem; width: 5.5rem;\"\n              src=\"{{ property.imgUrl }}\"\n              alt=\"{{ property.name }}\" \n              title=\"{{ property.name }}\">\n          </a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"col col-md-7\">\n      <h4 class=\"my-5\">Description</h4>\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n</section>\n"
+module.exports = "<section>\n  <div class=\"row justify-content-center\">\n    <div class=\"col col-md-5\">\n      <h4 class=\"my-5\">HHA Properties\n        <button \n          class=\"btn btn-outline-primary\"\n          type=\"button\"\n          [routerLink]=\"['/add-new']\"\n          >Add New\n        </button>\n      </h4>\n      <ul class=\"list-group\">\n        <li class=\"list-group-item d-flex justify-content-between align-items-center mb-2 shadow\"\n        *ngFor=\"let property of hProperties\">\n          <a \n            [routerLink]=\"['/hha', property.id]\"\n            class=\"d-flex w-100 justify-content-between\">\n            <p>{{ property.name }}</p>\n            <img\n              style=\"height: 3rem; width: 5.5rem;\"\n              src=\"{{ property.imgUrl }}\"\n              alt=\"{{ property.name }}\" \n              title=\"{{ property.name }}\">\n          </a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"col col-md-7\">\n      <h4 class=\"my-5\">Description</h4>\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n</section>\n"
 
 /***/ }),
 
@@ -621,13 +723,13 @@ var HomeComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "eProperty", function() { return eProperty; });
 var eProperty = /** @class */ (function () {
-    function eProperty(id, name, imgUrl, address, website, phone) {
+    function eProperty(id, name, imgUrl, address, website, email) {
         this.id = id;
         this.name = name;
         this.imgUrl = imgUrl;
         this.address = address;
         this.website = website;
-        this.phone = phone;
+        this.email = email;
     }
     return eProperty;
 }());
@@ -778,7 +880,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section>\n  <!-- DODAC KONTENER PO PRAWEJ I PO LEWEJ -->\n  <div class=\"row justify-content-center\">\n    <div class=\"col col-md-5\">\n      <h4 class=\"my-5\">National Trust Properties</h4>\n      <ul class=\"list-group\">\n        <li class=\"list-group-item d-flex justify-content-between align-items-center mb-2 shadow\"\n        *ngFor=\"let property of nProperties\">\n          <a \n            [routerLink]=\"['/national-trust', property.id]\"\n            class=\"d-flex w-100 justify-content-between\">\n            <p>{{ property.name }}</p>\n            <img\n              style=\"height: 3rem; width: 5.5rem;\"\n              src=\"{{ property.imgUrl }}\"\n              alt=\"{{ property.name }}\" \n              title=\"{{ property.name }}\">\n          </a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"col col-md-7\">\n      <h4 class=\"my-5\">Description</h4>\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n</section>\n"
+module.exports = "<section>\n  <!-- DODAC KONTENER PO PRAWEJ I PO LEWEJ -->\n  <div class=\"row justify-content-center\">\n    <div class=\"col col-md-5\">\n      <h4 class=\"my-5\">National Trust Properties\n        <button \n          class=\"btn btn-outline-primary\"\n          type=\"button\"\n          [routerLink]=\"['/add-new']\"\n          >Add New\n        </button>\n      </h4>\n      <ul class=\"list-group\">\n        <li class=\"list-group-item d-flex justify-content-between align-items-center mb-2 shadow\"\n        *ngFor=\"let property of nProperties\">\n          <a \n            [routerLink]=\"['/national-trust', property.id]\"\n            class=\"d-flex w-100 justify-content-between\">\n            <p>{{ property.name }}</p>\n            <img\n              style=\"height: 3rem; width: 5.5rem;\"\n              src=\"{{ property.imgUrl }}\"\n              alt=\"{{ property.name }}\" \n              title=\"{{ property.name }}\">\n          </a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"col col-md-7\">\n      <h4 class=\"my-5\">Description</h4>\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n</section>\n"
 
 /***/ }),
 
@@ -898,12 +1000,12 @@ __webpack_require__.r(__webpack_exports__);
 var EService = /** @class */ (function () {
     function EService() {
         this.eProperties = [
-            new _models_eProperty_model__WEBPACK_IMPORTED_MODULE_0__["eProperty"](1, 'Tintagel Castle', 'http://www.ciekaweuk.pl/wp-content/uploads/2017/04/Tintagel-Castle-003-Z.jpg', 'Castle Road, Tintagel, Cornwall, PL34 0HE', 'http://www.english-heritage.org.uk/visit/places/tintagel-castle/', '01840 770328'),
-            new _models_eProperty_model__WEBPACK_IMPORTED_MODULE_0__["eProperty"](2, 'Dover Castle', 'http://www.ciekaweuk.pl/wp-content/uploads/2017/04/Dover-Castle-002-Z.jpg', 'Castle Hill, Dover, Kent, CT16 1HU', 'http://www.english-heritage.org.uk/visit/places/dover-castle/', '01304 211 067'),
-            new _models_eProperty_model__WEBPACK_IMPORTED_MODULE_0__["eProperty"](3, 'Rievaulx Abbey', 'http://www.ciekaweuk.pl/wp-content/uploads/2017/03/Rievaulx-Abbey-003-Z.jpg', 'Rievaulx Bank, Rievaulx, Helmsley YO62 5LB', 'http://www.english-heritage.org.uk/visit/places/rievaulx-abbey/', '01439 798228'),
-            new _models_eProperty_model__WEBPACK_IMPORTED_MODULE_0__["eProperty"](4, 'Kenilworth Castle', 'http://www.ciekaweuk.pl/wp-content/uploads/2017/03/Kenilworth-Castle-004-Z.jpg', 'Castle Green, Off Castle Road, Kenilworth, Warwickshire CV8 1NG', 'http://www.english-heritage.org.uk/visit/places/kenilworth-castle/', '01926 852078'),
-            new _models_eProperty_model__WEBPACK_IMPORTED_MODULE_0__["eProperty"](5, 'Lindisfarne Priory', 'http://www.ciekaweuk.pl/wp-content/uploads/2017/09/Lindisfarne-Priory-001-Z.jpg', 'Holy Island, Berwick-Upon-Tweed, Northumberland, TD15 2RX', 'http://www.english-heritage.org.uk/visit/places/lindisfarne-priory/', '0128 938 9200'),
-            new _models_eProperty_model__WEBPACK_IMPORTED_MODULE_0__["eProperty"](6, 'Kirby Hall', 'http://www.ciekaweuk.pl/wp-content/uploads/2017/04/Kirby-Hall-001-Z.jpg', 'BOff Kirby Lane, Corby, Northamptonshire, NN17 3EN', 'http://www.english-heritage.org.uk/visit/places/kirby-hall/', '01536 203230'),
+            new _models_eProperty_model__WEBPACK_IMPORTED_MODULE_0__["eProperty"](1, 'Tintagel Castle', 'http://www.ciekaweuk.pl/wp-content/uploads/2017/04/Tintagel-Castle-003-Z.jpg', 'Castle Road, Tintagel, Cornwall, PL34 0HE', 'http://www.english-heritage.org.uk/visit/places/tintagel-castle/', 'N/A'),
+            new _models_eProperty_model__WEBPACK_IMPORTED_MODULE_0__["eProperty"](2, 'Dover Castle', 'http://www.ciekaweuk.pl/wp-content/uploads/2017/04/Dover-Castle-002-Z.jpg', 'Castle Hill, Dover, Kent, CT16 1HU', 'http://www.english-heritage.org.uk/visit/places/dover-castle/', 'N/A'),
+            new _models_eProperty_model__WEBPACK_IMPORTED_MODULE_0__["eProperty"](3, 'Rievaulx Abbey', 'http://www.ciekaweuk.pl/wp-content/uploads/2017/03/Rievaulx-Abbey-003-Z.jpg', 'Rievaulx Bank, Rievaulx, Helmsley YO62 5LB', 'http://www.english-heritage.org.uk/visit/places/rievaulx-abbey/', 'N/A'),
+            new _models_eProperty_model__WEBPACK_IMPORTED_MODULE_0__["eProperty"](4, 'Kenilworth Castle', 'http://www.ciekaweuk.pl/wp-content/uploads/2017/03/Kenilworth-Castle-004-Z.jpg', 'Castle Green, Off Castle Road, Kenilworth, Warwickshire CV8 1NG', 'http://www.english-heritage.org.uk/visit/places/kenilworth-castle/', 'N/A'),
+            new _models_eProperty_model__WEBPACK_IMPORTED_MODULE_0__["eProperty"](5, 'Lindisfarne Priory', 'http://www.ciekaweuk.pl/wp-content/uploads/2017/09/Lindisfarne-Priory-001-Z.jpg', 'Holy Island, Berwick-Upon-Tweed, Northumberland, TD15 2RX', 'http://www.english-heritage.org.uk/visit/places/lindisfarne-priory/', 'N/A'),
+            new _models_eProperty_model__WEBPACK_IMPORTED_MODULE_0__["eProperty"](6, 'Kirby Hall', 'http://www.ciekaweuk.pl/wp-content/uploads/2017/04/Kirby-Hall-001-Z.jpg', 'BOff Kirby Lane, Corby, Northamptonshire, NN17 3EN', 'http://www.english-heritage.org.uk/visit/places/kirby-hall/', 'N/A'),
         ];
     }
     EService.prototype.getEproperties = function () {
@@ -912,6 +1014,9 @@ var EService = /** @class */ (function () {
     };
     EService.prototype.getProperty = function (id) {
         return this.eProperties.find(function (el) { return el.id === id; });
+    };
+    EService.prototype.addProperty = function (property) {
+        this.eProperties.push(property);
     };
     return EService;
 }());
@@ -950,6 +1055,9 @@ var HService = /** @class */ (function () {
     HService.prototype.getProperty = function (id) {
         return this.hProperties.find(function (el) { return el.id === id; });
     };
+    HService.prototype.addProperty = function (property) {
+        this.hProperties.push(property);
+    };
     return HService;
 }());
 
@@ -986,6 +1094,9 @@ var NService = /** @class */ (function () {
     };
     NService.prototype.getProperty = function (id) {
         return this.nProperties.find(function (el) { return el.id === id; });
+    };
+    NService.prototype.addProperty = function (property) {
+        this.nProperties.push(property);
     };
     return NService;
 }());

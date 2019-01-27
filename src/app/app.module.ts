@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NService } from './services/national-trust.service';
 import { EService } from './services/english-heritage.service';
 import { HService } from './services/hha.service';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,14 @@ import { HService } from './services/hha.service';
     EPropertyComponent,
     HPropertyComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [NService, EService, HService],
   bootstrap: [AppComponent]

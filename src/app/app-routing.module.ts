@@ -9,6 +9,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NPropertyComponent } from './national-trust/n-property/n-property.component';
 import { EPropertyComponent } from './english-heritage/e-property/e-property.component';
 import { HPropertyComponent } from './hha/h-property/h-property.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +22,8 @@ const routes: Routes = [
   { path: 'hha', component: HhaComponent, children: [
     { path: ':id', component: HPropertyComponent }
   ] },
+  { path: 'add-new', component: FormComponent },
+  
   { path: '', redirectTo: '/not-found', pathMatch: 'full' },
   { path: 'not-found', component: NotFoundComponent, data: { message: 'Page not found!' } },
   { path: '**', redirectTo: '/not-found' },

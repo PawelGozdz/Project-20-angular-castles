@@ -1,5 +1,6 @@
 export class hProperty {
-  constructor(public id: number, 
+  constructor(
+    public id: number, 
     public name: string, 
     public imgUrl: string, 
     public address: string, 
