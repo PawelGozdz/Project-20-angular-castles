@@ -61,5 +61,7 @@ export class FormComponent implements OnInit {
         this.newForm.value['email'],
       ));
     }
+
+    this.newForm.reset();
   }
 }
