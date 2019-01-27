@@ -443,6 +443,7 @@ var FormComponent = /** @class */ (function () {
         else {
             this.hService.addProperty(new _models_hProperty_model__WEBPACK_IMPORTED_MODULE_8__["hProperty"](this.hService.getHproperties().length + 1, this.newForm.value['propertyName'], this.newForm.value['imgUrl'], this.newForm.value['address'], this.newForm.value['website'], this.newForm.value['email']));
         }
+        this.newForm.reset();
     };
     FormComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
