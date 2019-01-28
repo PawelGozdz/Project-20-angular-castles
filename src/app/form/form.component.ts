@@ -40,8 +40,8 @@ export class FormComponent implements OnInit {
         this.newForm.value['imgUrl'],
         this.newForm.value['address'],
         this.newForm.value['website'],
-        this.newForm.value['email'],
-      ));
+        this.newForm.value['email']
+      ))
     } else if (+this.newForm.value.inputGroupSelect === 2) {
       this.eService.addProperty(new eProperty(
         this.eService.getEproperties().length + 1,
@@ -49,8 +49,8 @@ export class FormComponent implements OnInit {
         this.newForm.value['imgUrl'],
         this.newForm.value['address'],
         this.newForm.value['website'],
-        this.newForm.value['email'],
-      ));
+        this.newForm.value['email']
+      ))
     } else {
       this.hService.addProperty(new hProperty(
         this.hService.getHproperties().length + 1,
@@ -58,8 +58,8 @@ export class FormComponent implements OnInit {
         this.newForm.value['imgUrl'],
         this.newForm.value['address'],
         this.newForm.value['website'],
-        this.newForm.value['email'],
-      ));
+        this.newForm.value['email']
+      ))
     }
 
     this.newForm.reset();
